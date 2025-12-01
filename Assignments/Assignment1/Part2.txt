@@ -1,0 +1,36 @@
+Q1:
+both for iteration
+forEach only workks in arrays
+for of for anything iteeratable
+forEach simpl and fast
+for of for more compleex operations for example continueee, break, await,etc
+
+Q2:
+Hoisting is the variables going up 
+workks with functions too
+only deeclaration not assiognment
+var a = 10 only var a is hoisted and undefined
+temporal dead zone is the opposite of Hoisting
+let and const are tdz
+log a 
+var a = 10
+undefined
+log b
+let b =20
+error
+
+Q3:
+== value must be equal
+=== value and type must be equal
+
+Q4:
+you try an operation and if it didn't workk you catch the error
+important in async ad promises so error don't go unnoticed
+
+Q5:
+type  conversion is manual
+Number('3') //3
+string(300) //'300'
+coercion happens in the backgroung
+'5'+2 //'52' number to string
+'5'-2 //3 string to number
