@@ -1,14 +1,14 @@
 Q1:
 both for iteration
-forEach only workks in arrays
-for of for anything iteeratable
-forEach simpl and fast
-for of for more compleex operations for example continueee, break, await,etc
+forEach only works in arrays
+for of for anything iteratable
+forEach simple and fast
+for of for more complex operations for example continue, break, await, etc.
 
 Q2:
 Hoisting is the variables going up 
-workks with functions too
-only deeclaration not assiognment
+works with functions too
+only declaration not assiognment
 var a = 10 only var a is hoisted and undefined
 temporal dead zone is the opposite of Hoisting
 let and const are tdz
@@ -28,9 +28,9 @@ you try an operation and if it didn't workk you catch the error
 important in async ad promises so error don't go unnoticed
 
 Q5:
-type  conversion is manual
+type conversion is manual
 Number('3') //3
 string(300) //'300'
-coercion happens in the backgroung
+coercion happens in the background
 '5'+2 //'52' number to string
 '5'-2 //3 string to number
