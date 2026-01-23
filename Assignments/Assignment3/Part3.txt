@@ -1,0 +1,29 @@
+Q1:
+it manages requests and responses
+it takes requests from event queue and give it to virtual threads
+and then takes responses from threads and sends it back to the event queue in order
+
+Q2:
+it's a c library that has the virtual threads
+it take the js requests from v8 in the form of c++
+
+Q3:
+it is single threaded but a thread has 4 virtual threads by default and can be modified
+the requests are added to the event queue and then in order they aregive to virtual threads
+they work in parallel and whichever finishes first sends the respose back to the event queue through the event loop
+
+Q4:
+call stack runs synchronous operations
+event queue runs async operations
+event loop is like the manager that checks if operations are done and responses are sent etc
+
+Q5:
+thread pool is the number of virtual threads a thread has
+it can be modified from the terminal
+UV_THREADPOOL_SIZE=8 node app.js
+on linux and can use git bash on windows
+
+Q6:
+blocking operations(sync) are sent to the call stack and are executed first in the event loop
+non-blocking(async) are sent to the event queue and are run after the synchronous operations
+the non-blocking has a precedence order as well
