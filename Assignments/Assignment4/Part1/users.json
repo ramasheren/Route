@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Rama",
+    "email": "ramasheren2004@gmail.com",
+    "age": 21,
+    "gender": "female",
+    "balance": "$3,946.45"
+  },
+  {
+    "id": 2,
+    "name": "Ramsey",
+    "email": "birdramsey@nimon.com",
+    "age": "32",
+    "gender": "male",
+    "balance": "$3,946.45"
+  },
+  {
+    "id": 3,
+    "name": "Rowling",
+    "email": "jkrow@nimon.com",
+    "age": 25,
+    "gender": "male",
+    "balance": "$3,946.45"
+  }
+]
