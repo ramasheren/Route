@@ -1,0 +1,61 @@
+use assignment7_1
+
+Q1
+db.createCollection("books", {validator:{title:{$exists:true,$ne:null}}})
+
+Q2
+db.authors.insertOne({ name: "Author1", nationality: "British" })
+
+Q3
+db.createCollection("logs", { capped: true, size: 1048576 })
+
+Q4
+db.books.createIndex({title:1})
+
+Q5
+db.books.insertOne({ title: "Book1", author: "Ali", year: 1937, genres: ["Fantasy", "Adventure"] })
+
+Q6
+db.books.insertMany([
+  { title: "Future", author: "George Orwell", year: 2020, genres: ["Science Fiction"] },
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, genres: ["Classic", "Fiction"] },
+  { title: "Brave New World", author: "Aldous Huxley", year: 2006, genres: ["Dystopian", "Science Fiction"] }
+])
+
+Q7
+db.logs.insertOne({ book_id: "64b5c2d8a123456ef8914", action: "borrowed" })
+
+Q8
+db.books.updateMany({title: "Future"}, {$set:{year:2022}})
+
+Q9
+db.books.find({title:"Brave New World"})
+
+Q10
+db.books.find({year:{$gte:1990,$lte:2010}})
+
+Q11
+db.books.find({genres:"Science Fiction"})
+
+Q12
+db.books.find().sort({year:-1}).skip(2).limit(3)
+
+Q13
+db.books.find({year:{$type:"int"}})
+
+Q14
+db.books.find({genres:{$nin:["Science Fiction","Horror"]}})
+
+Q15
+db.books.deleteMany({year:{$lt:2000}})
+
+Q16
+db.books.find({year:{$gt:2000}}).sort({year:-1})
+
+Q17
+db.books.find({year:{$gt:2000}},{title:1,author:1,year:1,_id:0})
+
+Q18
+db.books.aggregate([{$unwind:"$genres"},{$project:{title:1,genres:1,_id:0}}])
+
+Q19
